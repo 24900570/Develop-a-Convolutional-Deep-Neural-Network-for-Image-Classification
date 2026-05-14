@@ -7,6 +7,7 @@ To develop a convolutional deep neural network (CNN) for image classification an
 Design and implement a Convolutional Neural Network (CNN) using PyTorch to classify grayscale images of clothing items into predefined categories. The model should be trained, evaluated, and used to predict the class of unseen images with good accuracy.
 
 ## Neural Network Model
+
 <img width="1039" height="754" alt="560730704-60b76dac-5d2c-49c3-a18f-35285600a6ce" src="https://github.com/user-attachments/assets/4fc7410d-af4a-4d60-8216-d8c5fbd78eb8" />
 
 
@@ -108,8 +109,8 @@ if torch.cuda.is_available():
     model.to(device)
 
 # Print model summary
-print('Name: Harshavardhan.k.b')
-print('Register Number: 212224240054')
+print('Name:AJITH A')
+print('Register Number: 212224230012')
 summary(model, input_size=(1, 28, 28))
 
 # Initialize model, loss function, and optimizer
@@ -130,8 +131,8 @@ def train_model(model, train_loader, num_epochs=3):
       running_loss += loss.item()
 
 
-    print('Name: Harshavardhan k.b')
-    print('Register Number: 212224240054')
+    print('Name: AJITH A')
+    print('Register Number: 212224230012')
     print(f'Epoch [{epoch+1}/{num_epochs}], Loss: {running_loss/len(train_loader):.4f}')
 
 # Train the model
@@ -155,15 +156,15 @@ def test_model(model, test_loader):
             all_labels.extend(labels.cpu().numpy())
 
     accuracy = correct / total
-    print('Name: Harshavardhan.k.b')
-    print('Register Number: 212224240054')
+    print('Name:AJITH A')
+    print('Register Number:212224230012')
     print(f'Test Accuracy: {accuracy:.4f}')
 
     # Compute confusion matrix
     cm = confusion_matrix(all_labels, all_preds)
     plt.figure(figsize=(8, 6))
-    print('Name:Harshavardhan.k.b')
-    print('Register Number: 212224240054')
+    print('Name:AJITH A')
+    print('Register Number: 212224230012')
     sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=test_dataset.classes, yticklabels=test_dataset.classes)
     plt.xlabel('Predicted')
     plt.ylabel('Actual')
@@ -171,8 +172,8 @@ def test_model(model, test_loader):
     plt.show()
 
     # Print classification report
-    print('Name:Harshavardhan.k.b')
-    print('Register Number: 212224240054')
+    print('Name:AJITH A')
+    print('Register Number: 212224230012')
     print("Classification Report:")
     print(classification_report(all_labels, all_preds, target_names=test_dataset.classes))
 
@@ -190,8 +191,8 @@ def predict_image(model, image_index, dataset):
     class_names = dataset.classes
 
     # Display the image
-    print('Name:Harshavardhan.k.b')
-    print('Register Number: 212224240054')
+    print('Name:AJITH A')
+    print('Register Number: 212224230012')
     plt.imshow(image.squeeze(), cmap="gray")
     plt.title(f'Actual: {class_names[label]}\nPredicted: {class_names[predicted.item()]}')
     plt.axis("off")
